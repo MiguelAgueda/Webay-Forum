@@ -19,3 +19,12 @@ Webay Forum is a user forum for the Webay webstore.
 [Webay](https://github.com/MiguelAgueda/Webay)
 
 [Webay Backend](https://github.com/MiguelAgueda/Webay-Backend)
+
+
+# Documentation
+
+## Reference Diagram
+
+The following are various options for structuring forum data. 
+
+![A Folder/Subfolder Approach](assets/doc_images/poss_forum_data_struct.pdf)
