@@ -1,11 +1,13 @@
 # Webay Forum
 
+Webay Forum is a forum backend for the Webay webstore.
+
+## Dependencies
+
+pymongo
+
+
 ## Documentation
-
-### Reference Diagrams
-
-The following are various options for structuring forum data. 
-![A Folder/Subfolder Approach](assets/doc_images/poss_forum_data_struct.png)
 
 # Webay Forum Proprosal
 
