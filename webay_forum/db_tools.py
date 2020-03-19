@@ -12,11 +12,11 @@ from pymongo import MongoClient
 class ForumDBTools:
 
     def __init__(self):
-        self.db = self.__connect_client()
+        self.db = self.connect_client()
         self.key = os.environ.get('WEBAY_FORUM_CRYPT_KEY').encode()
         assert(type(self.key) is bytes)
 
-    def __connect_client(self):
+    def connect_client(self):
         """
         Connect to specified uri, assumes that username and password are stored
         as WEBAY_FORUM_DB_USER and WEBAY_FORUM_DB_PASS as environment varables.
