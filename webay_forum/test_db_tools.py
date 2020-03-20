@@ -1,8 +1,9 @@
 """This is a test for webay_forum/db_tools.py"""
 
-from db_tools import ForumDBTools
+from db_tools import UserDBTools
 
 
-db_tools = ForumDBTools()
+db_tools = UserDBTools()
+db_tools.local = True
 
-db_tools.add_user("Miguel", "FakePassword101")
+db_tools.add_user("UniqueUsername!", "FakePassword101")
