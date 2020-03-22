@@ -60,6 +60,7 @@ class UserDBTools(BaseDBTools):
     - create_user: Creates user with unique username.
     - read_user: Returns the '_id' object of user with 'username'.
     - update_user: Updates existing user's username and/or password.
+    - all_users: Returns a list of currently in-use usernames.
     - delete_user: Deletes existing user.
     """
 
@@ -121,6 +122,13 @@ class UserDBTools(BaseDBTools):
             return None
         user__id = user["_id"]
         return user__id
+
+    def all_users(self):
+        """Return set of all usernames."""
+        return_list = []
+        for post in self.client.db.users.find({"username": {"$exists": "true"}}, {"_id": 0, "username": 1}):
+            return_list.append(post["username"])
+        return return_list
 
     def update_user(self, user__id, new_user=None, new_pass=None):
         """

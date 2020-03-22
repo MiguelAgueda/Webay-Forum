@@ -15,8 +15,8 @@ forum_tools.local = True
 user_added = user_tools.create_user(USERNAME, "FakePassword101")
 user__id = user_tools.read_user(USERNAME)
 user_updated = user_tools.update_user(user__id, new_user=NEW_USERNAME, new_pass=NEW_PASSWORD)
-user_deleted = user_tools.delete_user(user__id)
-print(F"User Added: {user_added}\nUser Updated: {user_updated}\nUser Deleted: {user_deleted}")
+# user_deleted = user_tools.delete_user(user__id)
+# print(F"User Added: {user_added}\nUser Updated: {user_updated}\nUser Deleted: {user_deleted}")
 
 title = "A Root Post"
 
@@ -29,3 +29,5 @@ post__id3 = forum_tools.create_post(user__id, "Just To Delete", parent__id=orig_
 forum_tools.update_post(post__id1, title="This was post__id1")
 forum_tools.update_post(post__id2, content="This was post__id2")
 forum_tools.delete_post(post__id3)
+
+print(user_tools.all_users())
