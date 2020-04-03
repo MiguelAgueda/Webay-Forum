@@ -30,4 +30,6 @@ forum_tools.update_post(post__id1, title="This was post__id1")
 forum_tools.update_post(post__id2, content="This was post__id2")
 forum_tools.delete_post(post__id3)
 
+if user_tools.login_user(USERNAME, "FakePassword101"):
+    print("Login Successful!")
 print(user_tools.all_users())
